@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>main.qml</file>
-        <file>ClickableText.qml</file>
-        <file>signInForm.qml</file>
-        <file>signUpForm.qml</file>
-    </qresource>
-</RCC>
