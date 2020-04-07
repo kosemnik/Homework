@@ -11,12 +11,10 @@ class AuthManager : public QObject
 public:
     explicit AuthManager(QObject *parent = nullptr);
 
-
     void registering (const QString &login,
                       const QString &passwod);
     void authenticate(const QString &login,
                       const QString &password);
-
 
 private:
     QNetworkAccessManager _net;
@@ -24,6 +22,5 @@ private:
 signals:
     void RegisterRequestCompleted(QString);
     void AuthenticateRequestCompleted(QString, QString);
-
 };
 #endif // AUTHMANAGER_H

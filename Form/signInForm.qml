@@ -47,7 +47,7 @@ Item {
         anchors.top: password.bottom
         anchors.topMargin: 5
         font.pixelSize: 15
-        enabled: (login.length > 5 && password.length > 5) ? true : false
+        enabled: login.length > 5 && password.length > 5
         onClicked: busyIndicator.visible = true
     }
 

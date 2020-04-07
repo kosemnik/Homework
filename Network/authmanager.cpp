@@ -1,5 +1,4 @@
 #include "authmanager.h"
-
 #include <QNetworkRequest>
 #include <QNetworkReply>
 #include <QUrl>
@@ -54,7 +53,4 @@ void AuthManager::authenticate(const QString &login, const QString &password)
                 emit AuthenticateRequestCompleted(reply -> errorString(), token);
                 reply -> deleteLater();
     });
-
 }
-
-

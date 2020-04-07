@@ -43,7 +43,7 @@ Item {
     }
 
     TextField {
-        id: repeaPassword
+        id: repeatPassword
         width: parent.width - 20
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.leftMargin: 10
@@ -62,7 +62,7 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.leftMargin: 10
         anchors.rightMargin: 10
-        anchors.top: repeaPassword.bottom
+        anchors.top: repeatPassword.bottom
         anchors.topMargin: 5
         font.pointSize: 13
         placeholderText: "nickname"
@@ -76,10 +76,10 @@ Item {
         anchors.top: nickname.bottom
         anchors.topMargin: 5
         font.pixelSize: 15
-        enabled: (login.length > 5 && password.length > 5 && repeaPassword.length > 5 && nickname.length > 5) ? true : false
+        enabled: login.length > 5 && password.length > 5 && repeatPassword.length > 5 && nickname.length > 5
         onClicked: {
             busyIndicator.visible = true
-            if (password.text !== repeaPassword.text)
+            if (password.text !== repeatPassword.text)
             {
                 wrongPassword.visible = true
                 busyIndicator.visible = false

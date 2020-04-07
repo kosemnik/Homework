@@ -18,10 +18,12 @@ Window {
 
     ClickableText {
         id: signIn
+        anchors.bottomMargin: 10
+        anchors.bottom: parent.bottom
         text: qsTr("Sign in")
         anchors.right: slash.left
         anchors.rightMargin: 5
-        font.underline: (form == 0) ? true : false
+        font.underline: form == 0
         onClicked: form = 0
     }
 
@@ -36,10 +38,12 @@ Window {
 
     ClickableText {
         id: signUp
+        anchors.bottomMargin: 10
+        anchors.bottom: parent.bottom
         text: qsTr("Sign up")
         anchors.left: slash.right
         anchors.leftMargin: 5
-        font.underline: (form == 0) ? false : true
+        font.underline: form != 0
         onClicked: form = 1
     }
 }
